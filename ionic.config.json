@@ -1,0 +1,7 @@
+{
+  "name": "grievy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
