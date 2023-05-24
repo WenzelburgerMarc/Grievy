@@ -20,7 +20,9 @@
     "@ionic/vue": "^7.0.0",
     "@ionic/vue-router": "^7.0.0",
     "ionicons": "^7.0.0",
+    "swiper": "^8.4.7",
     "vue": "^3.2.45",
+    "vue-awesome-swiper": "^5.0.1",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
