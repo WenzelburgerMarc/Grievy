@@ -7,7 +7,7 @@
       <swiper ref="swiper" @init="initSwiper" :lazy="true" :slidesPerView="1" class="swiper-no-swiping">
 
         <swiper-slide v-for="indexFood in foodList.length" :key="indexFood - 1">
-          <the-question :index="indexFood - 1" @increaseIndex="increaseIndex" @showResults="goToResults" />
+          <the-question :index="indexFood - 1" @goToNextQuestion="goToNextQuestion" @showResults="goToResults" />
         </swiper-slide>
         <swiper-slide>
           <the-result ref="theResult" />
@@ -45,7 +45,6 @@ export default {
   },
   data() {
     return {
-      questionIndex: 0,
       foodList: Store.state.foodList,
       swiperInstance: null as typeof Swiper | null,
     };
@@ -54,8 +53,7 @@ export default {
     initSwiper(swiper: any) {
       this.swiperInstance = swiper;
     },
-    increaseIndex() {
-      this.questionIndex++;
+    goToNextQuestion() {
       this.increaseProgressBar();
     },
     goToResults() {

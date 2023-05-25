@@ -31,7 +31,7 @@ export default {
         },
         goToNextSlide() {
             if (this.index < this.foodList.length - 1) {
-                this.$emit('increaseIndex');
+                this.$emit('goToNextQuestion');
             } else {
                 this.$emit('showResults');
             }
